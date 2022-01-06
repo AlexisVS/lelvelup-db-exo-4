@@ -15,8 +15,8 @@ class CreateAffiliationsTable extends Migration
     {
         Schema::create('affiliations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('medecin_id');
-            $table->foreignId('departement_id');
+            $table->foreignId('medecin_id')->constrained();
+            $table->foreignId('departement_id')->constrained();
             $table->boolean('medcin_principale');
             $table->timestamps();
         });

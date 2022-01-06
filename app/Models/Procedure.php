@@ -11,6 +11,6 @@ class Procedure extends Model
 
         
     public function traitements () {
-        return $this->hasOne(Procedure::class);
+        return $this->hasOne(Traitement::class);
     }
 }

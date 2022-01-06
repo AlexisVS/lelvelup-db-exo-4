@@ -10,6 +10,6 @@ class Medicament extends Model
     use HasFactory;
     
     public function prescriptions () {
-        return $this->hasOne(Medicament::class);
+        return $this->hasOne(Prescription::class);
     }
 }

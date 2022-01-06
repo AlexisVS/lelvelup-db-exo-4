@@ -10,14 +10,14 @@ class Infirmier extends Model
     use HasFactory;
 
     public function consultations () {
-        return $this->hasOne(Infirmier::class);
+        return $this->hasOne(Consultation::class);
     }
         
     public function traitements () {
-        return $this->hasOne(Infirmier::class);
+        return $this->hasOne(Traitement::class);
     }
 
     public function oncalls () {
-        return $this->hasOne(Infirmier::class);
+        return $this->hasOne(Oncall::class);
     }
 }

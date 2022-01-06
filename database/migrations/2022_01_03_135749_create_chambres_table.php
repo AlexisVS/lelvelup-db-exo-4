@@ -16,8 +16,7 @@ class CreateChambresTable extends Migration
         Schema::create('chambres', function (Blueprint $table) {
             $table->id();
             $table->string('chamber_type');
-            $table->string('block_stage');
-            $table->string('block_code');
+            $table->foreignId('block_id')->constrained();
             $table->boolean('occuped');
             $table->timestamps();
         });

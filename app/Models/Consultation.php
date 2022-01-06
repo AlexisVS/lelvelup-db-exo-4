@@ -10,6 +10,6 @@ class Consultation extends Model
     use HasFactory;
     
     public function prescriptions () {
-        return $this->hasOne(Consultation::class);
+        return $this->hasOne(Prescription::class);
     }
 }

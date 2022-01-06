@@ -9,27 +9,28 @@ class Medecin extends Model
 {
     use HasFactory;
 
-    public function affiliations () {
-        return $this->hasOne(Medecin::class);
+    public function affiliations()
+    {
+        return $this->hasOne(Affiliation::class);
     }
 
-    public function departements () {
-        return $this->hasOne(Medecin::class, 'chef_doctor_id');
+    public function qualifications()
+    {
+        return $this->hasOne(Qualification::class);
     }
 
-    public function qualifications() {
-        return $this->hasOne(Medecin::class);
+    public function consultations()
+    {
+        return $this->hasOne(Consultation::class);
     }
 
-    public function consultations () {
-        return $this->hasOne(Medecin::class);
+    public function prescriptions()
+    {
+        return $this->hasOne(Prescription::class);
     }
 
-    public function prescriptions () {
-        return $this->hasOne(Medecin::class);
-    }
-
-    public function traitements () {
-        return $this->hasOne(Medecin::class);
+    public function traitements()
+    {
+        return $this->hasOne(Traitement::class);
     }
 }

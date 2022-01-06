@@ -9,18 +9,18 @@ class Patient extends Model
 {
     use HasFactory;
     public function hospitalisations () {
-        return $this->hasOne(Patient::class);
+        return $this->hasOne(hospitalisations::class);
     }
 
     public function consultations () {
-        return $this->hasOne(Patient::class);
+        return $this->hasOne(Consultation::class);
     }
     
     public function prescriptions () {
-        return $this->hasOne(Patient::class);
+        return $this->hasOne(Prescription::class);
     }
     
     public function traitements () {
-        return $this->hasOne(Patient::class);
+        return $this->hasOne(Traitement::class);
     }
 }

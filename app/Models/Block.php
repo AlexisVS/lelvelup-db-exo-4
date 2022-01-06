@@ -10,6 +10,10 @@ class Block extends Model
     use HasFactory;
 
     public function oncalls () {
-        return $this->hasOne(Block::class);
+        return $this->hasOne(Oncall::class);
+    }
+
+    public function chambres () {
+        return $this->hasOne(Chambre::class);
     }
 }

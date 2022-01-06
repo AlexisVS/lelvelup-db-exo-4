@@ -16,8 +16,7 @@ class CreateOncallsTable extends Migration
         Schema::create('oncalls', function (Blueprint $table) {
             $table->id();
             $table->foreignId('infirmier_id')->constrained();
-            $table->integer('block_stage');
-            $table->integer('block_code');
+            $table->foreignId('block_id')->constrained();
             $table->date('schedure_begin');
             $table->date('schedure_ending');
             $table->timestamps();

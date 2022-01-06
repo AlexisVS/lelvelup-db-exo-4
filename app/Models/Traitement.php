@@ -10,6 +10,6 @@ class Traitement extends Model
     use HasFactory;
 
     public function qualifications () {
-        return $this->hasOne(Traitement::class);
+        return $this->hasOne(Qualification::class);
     }
 }

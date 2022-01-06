@@ -10,6 +10,6 @@ class Chambre extends Model
     use HasFactory;
 
     public function hospitalisations () {
-        return $this->hasOne(Chambre::class);
+        return $this->hasOne(Hospitalisation::class);
     }
 }

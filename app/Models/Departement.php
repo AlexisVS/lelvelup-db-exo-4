@@ -10,6 +10,6 @@ class Departement extends Model
     use HasFactory;
 
     public function affiliations () {
-        return $this->hasOne(Departement::class);
+        return $this->hasOne(Affiliation::class);
     }
 }
